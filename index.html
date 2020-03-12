@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
     <input type="text" id="city" placeholder="Enter your city here..." />
-    <button id="search">Get weather</button>
+    <button class="search" id="search">Get weather</button>
+    <button class="search" id="searchGps"><img src="./gps.png" style="width: 1rem;"/></button>
+    <div>
+        <div class="tab">
+            <button class="tablinks" onclick="openView(event, 'infoTab')">5 Days forecast</button>
+            <button class="tablinks" onclick="openView(event, 'mapTab')"><img src="./map.png" style="width: 2rem;"/></button>
+        </div>
+        <div id="infoTab" class="tabcontent">
+            <div id="cityTitle" style="color: black;font-weight: bolder;padding-top: 2vh;">
+            </div>
+            <div id="list" class="basic-grid">
+            </div>
+        </div>
+        <div id="mapTab" class="tabcontent">
+            <div>
+                <div id='map'></div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
 <script src="./index.js"></script>
 </html>
