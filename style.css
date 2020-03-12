@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* height: 100vh; */
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    padding-top: 10vh;
+}
+input{
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    width: 80%;
+    height: 7vh;
+    padding: 1vh;
+}
